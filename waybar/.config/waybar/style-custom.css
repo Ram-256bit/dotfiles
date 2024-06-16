@@ -1,0 +1,328 @@
+/* =============================================================================
+ *
+ * Waybar configuration
+ *
+ * Configuration reference: https://github.com/Alexays/Waybar/wiki/Configuration
+ *
+ * =========================================================================== */
+
+/* -----------------------------------------------------------------------------
+ * Keyframes
+ * -------------------------------------------------------------------------- */
+
+
+/*
+Polar Night
+nord0  #2e3440
+nord1  #3b4252
+nord2  #434c5e
+nord3  #4c566a
+Snow Storm
+nord4  #d8dee9
+nord5  #e5e9f0
+nord6  #eceff4
+Frost
+nord7  #8fbcbb
+nord8  #88c0d0
+nord9  #81a1c1
+nord10 #5e81ac
+Aurora
+nord11 #bf616a
+nord12 #d08770
+nord13 #ebcb8b
+nord14 #a3be8c
+nord15 #b48ead
+*/
+
+/* -----------------------------------------------------------------------------
+ * Base styles
+ * -------------------------------------------------------------------------- */
+
+/* Reset all styles */
+
+* {
+    color: #eceff4;
+    border: none;
+    border-radius: 0;
+    padding: 0 0;
+    font-family: Liberation Mono;
+    /* font-size: 12px;
+    margin-left: 5px; */
+    border: none;
+    border-radius: 0;
+    min-height: 20px;
+    /* margin-right: 5px; */
+    margin-left: 5px;
+    padding-top:2px;
+    /* min-height: 20px;  */
+}
+
+window#waybar {
+    /* background:rgba (0, 0, 0, 0.5);
+    border-radius: 20px 20px 20px 20px;  */
+    background: transparent;
+}
+
+window#waybar.hidden {
+    opacity: 0.2;
+}
+
+#workspaces {
+    margin-right: 8px;
+    border-radius: 10px;
+    transition: none;
+    background: #383c4a;
+}
+
+#workspaces button {
+    transition: none;
+    color: #7c818c;
+    background: transparent;
+    padding: 2px;
+    font-size: 15px;
+}
+
+#workspaces button.persistent {
+    color: #7c818c;
+    font-size: 12px;
+}
+
+#workspaces button:hover {
+    transition: none;
+    box-shadow: inherit;
+    text-shadow: inherit;
+    border-radius: inherit;
+    color: #383c4a;
+    background: #7c818c;
+}
+
+#workspaces button.focused {
+    color: white;
+}
+
+/*
+#workspaces {
+    margin-right: 8px;
+    border-radius: 10px;
+    transition: none;
+    background: #383c4a;
+}
+#workspaces button {
+    transition: none;
+    color: #7c818c;
+    background: #383c4a;
+  padding: 1px; 
+    font-size: 18px;
+    padding: 2px 0px;
+    border-bottom: 2px;
+    color: #eceff4;
+    border-color: #d8dee9;
+    border-style: solid;
+    margin-top:2px; 
+    
+     margin-left: 0px; 
+
+}
+
+#workspaces button.persistent {
+   
+    
+    color: #7c818c;
+    font-size: 12px; 
+}
+
+#workspaces button:hover {
+    transition: none;
+    box-shadow: inherit;
+    text-shadow: inherit;
+    border-radius: inherit;
+    color: #383c4a;
+    background: #7c818c;
+}
+
+#workspaces button.focused {
+    color: white;
+}
+
+#workspaces button.active {
+    border-color: #81a1c1;
+} 
+*/
+
+/* #clock, */
+/* #battery, */
+#cpu,
+#memory,
+#idle_inhibitor,
+#temperature,
+#custom-keyboard-layout,
+/* #backlight, */
+#network,
+#pulseaudio,
+/* #tray, */
+/* #window, */
+#custom-launcher,
+#custom-power,
+/* #custom-pacman, */
+#custom-network_traffic,
+#custom-weather {
+    /* padding: 0 3px;
+    border-bottom: 2px;
+    border-style: solid; */
+    padding-left: 16px;
+    padding-right: 16px;
+    border-radius: 10px;
+    transition: none;
+    color: #ffffff;
+    background: #383c4a;
+    /* border-radius: 10px; */
+}
+
+/* -----------------------------------------------------------------------------
+ * Module styles
+ * -------------------------------------------------------------------------- */
+
+
+#clock {
+    color: #a3be8c;
+    /* padding-left: 16px;
+    padding-right: 16px;
+    border-radius: 10px 10px 10px 10px; */
+    transition: none;
+    color: #ffffff;
+    background: #383c4a;
+}
+
+#backlight {
+    /* color: #ebcb8b; */
+    margin-right: 8px;
+    padding-left: 16px;
+    padding-right: 16px;
+    border-radius: 10px;
+    transition: none;
+    color: #ffffff;
+    background: #383c4a;
+}
+
+#battery {
+    /* color: #d8dee9; */
+    margin-right: 8px;
+    padding-left: 16px;
+    padding-right: 16px;
+    border-radius: 10px;
+    transition: none;
+    color: #ffffff;
+    background: #383c4a;
+}
+
+#battery.charging {
+    /* color: #81a1c1; */
+    color: #ffffff;
+    background-color: #26A65B;
+}
+
+#battery.warning:not(.charging) {
+    /* Don't know why I added this , just added for safety */
+    background-color: #ffbe61;
+    color: black;
+}
+
+/* @keyframes blink {
+    to {
+        color: #4c566a;
+        background-color: #eceff4;
+    }
+} */
+
+#battery.critical:not(.charging) {
+    background-color: #f53c3c;
+    color: #ffffff;
+    animation-name: blink;
+    animation-duration: 0.5s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+    /* background: #bf616a;
+    color: #eceff4;
+    animation-name: blink;
+    animation-duration: 0.5s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    animation-direction: alternate; */
+}
+/* 
+#cpu {
+    color: #a3be8c;
+}
+
+#memory {
+    color: #d3869b;
+}
+
+#network.disabled {
+    color: #bf616a;
+}
+
+#network {
+    color: #a3be8c;
+}
+
+#network.disconnected {
+    color: #bf616a;
+}
+
+#pulseaudio {
+    color: #b48ead;
+}
+
+#pulseaudio.muted {
+    color: #3b4252;
+}
+
+#temperature {
+    color: #8fbcbb;
+}
+
+#temperature.critical {
+    color: #bf616a;
+}
+
+#idle_inhibitor {
+    color: #ebcb8b;
+} */
+
+#tray {
+    padding-left: 16px;
+    padding-right: 16px;
+    border-radius: 10px;
+    transition: none;
+    color: #ffffff;
+    background: #383c4a;
+}
+
+#custom-launcher,
+#custom-power {
+    border-style: hidden;
+    margin-top: 2px;
+}
+
+#window {
+    border-style: hidden;
+    margin-top: 1px;
+}
+
+/* #custom-keyboard-layout {
+    color: #d08770;
+}
+
+#custom-network_traffic {
+    color: #d08770;
+} */
+
+
+@keyframes blink {
+    to {
+        background-color: #ffffff;
+        color: #000000;
+    }
+}

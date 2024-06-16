@@ -1,0 +1,87 @@
+[pyprland]
+plugins = [
+  "scratchpads",
+  "lost_windows",
+  # "monitors",
+  # "toggle_dpms",
+  # "magnify",
+  "expose",
+  "fetch_client_menu",
+  # "shift_monitors",
+  "workspaces_follow_focus",
+]
+
+# [monitors.placement]
+# "Acer".top_center_of = "Sony"
+#
+# [workspaces_follow_focus]
+# max_workspaces = 9
+#
+# [expose]
+# include_special = false
+#
+# [scratchpads.stb]
+# animation = "fromBottom"
+# command = "kitty --class kitty-stb sstb"
+# class = "kitty-stb"
+# lazy = true
+# size = "75% 45%"
+#
+# [scratchpads.stb-logs]
+# animation = "fromTop"
+# command = "kitty --class kitty-stb-logs stbLog"
+# class = "kitty-stb-logs"
+# lazy = true
+# size = "75% 40%"
+
+[scratchpads.term]
+animation = "fromTop"
+command = "alacritty --class alacritty-dropterm -e tmux"
+class = "alacritty-dropterm"
+size = "65% 70%"
+
+[scratchpads.qalc]
+animation = "fromRight"
+command = "alacritty --class alacritty-dropterm-qalc -o 'font.size=20' -e qalc"
+class = "alacritty-dropterm-qalc"
+size = "30% 60%"
+
+[scratchpads.obsidian]
+animation = "fromRight"
+command = "obsidian"
+class = "obsidian"
+size = "30% 60%"
+# process_tracking = false
+lazy = false
+
+[scratchpads.volume]
+animation = "fromRight"
+command = "pavucontrol"
+class = "pavucontrol"
+lazy = true
+size = "40% 90%"
+unfocus = "hide"
+
+# [scratchpads.chatgpt]
+# animation = "fromRight"
+# command = "floorp --new-window 'https://chatgpt.com'"
+# class = "floorp"
+# size = "30% 60%"
+# process_tracking = false
+
+
+[scratchpads.chatgpt]
+animation = "fromRight"
+command = "google-chrome-stable --profile-directory=Default --app-id=cadlkienfkclaiaibeoongdcgmdikeeg"
+match_by = "title"
+title = "re:ChatGPT.*"
+size = "40% 70%"
+process_tracking = false
+
+# [scratchpads.volume]
+# animation = "fromRight"
+# command = "pavucontrol"
+# class = "pavucontrol"
+# lazy = true
+# size = "40% 90%"
+# unfocus = "hide"

@@ -1,0 +1,8 @@
+# Byte-compiled / optimized / DLL files
+# for ranger
+__pycache__/
+# *.py[cod]
+# *$py.class
+
+# for qalc history
+qalc.history

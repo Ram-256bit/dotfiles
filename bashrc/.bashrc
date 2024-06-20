@@ -176,7 +176,7 @@ ranger_cd() {
     if chosen_dir="$(cat -- "$temp_file")" && [ -n "$chosen_dir" ] && [ "$chosen_dir" != "$PWD" ]; then
         cd "$chosen_dir"
     fi
-    rm -f -- "$temp_file"
+    /bin/rm -f -- "$temp_file" # Custom change made to directly use 'rm' command instead of aliased 'trash' command
 }
 
 # # Source: https://github.com/TrudeEH/dotfiles/blob/a3431cca314551675f3c671c76b6fbd5a1f37aa4/dotfiles/.bashrc
@@ -189,6 +189,17 @@ ranger_cd() {
 #                        (g<75?0:(g-35)/40)*6   +
 #                        (b<75?0:(b-35)/40)     + 16 ))"
 # }
+
+# Yazi - stay in current dierctory
+# ref: https://yazi-rs.github.io/docs/quick-start#shell-wrapper
+function yy() {
+	local tmp="$(mktemp -t "yazi-cwd.XXXXXX")"
+	yazi "$@" --cwd-file="$tmp"
+	if cwd="$(cat -- "$tmp")" && [ -n "$cwd" ] && [ "$cwd" != "$PWD" ]; then
+		builtin cd -- "$cwd"
+	fi
+	/bin/rm -f -- "$tmp"
+}
 
 
 #Gives the name of the terminal emulator as output

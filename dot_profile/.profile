@@ -8,3 +8,4 @@ export XDG_SESSION_TYPE=wayland
 export EDITOR=/usr/bin/micro
 export TERM=xterm-256color
 export GTK2_RC_FILES=$HOME/.gtkrc-2.0
+. "$HOME/.cargo/env"

@@ -21,7 +21,7 @@
         "pulseaudio",
         "network",
         "tray",
-        "idle_inhibitor",
+        //"idle_inhibitor",
         "battery",
         "custom/power"
     ],

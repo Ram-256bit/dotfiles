@@ -164,6 +164,7 @@ alias g-off='gsettings set org.gnome.shell disable-user-extensions true'
 alias g-version='gsettings set org.gnome.shell disable-extension-version-validation "false"'
 alias t='tmux'
 alias c='clear'
+alias d='yy'
 
 # #Make your shell change to ranger’s directory on quit
 # #ref: https://github.com/ranger/ranger/wiki/Integration-with-other-programs#make-your-shell-change-to-rangers-directory-on-quit

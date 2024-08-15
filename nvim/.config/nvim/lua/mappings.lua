@@ -16,7 +16,9 @@ map("n", "<leader>ce", "<cmd>CompetiTest edit_testcase<cr>")
 
 -- ref: https://www.reddit.com/r/neovim/comments/xfcf26/comment/iolvibh
 -- map("n", "<leader>r", ":w | sp | term gcc % -o %< && %< <cr>", { desc = "Run C program"})
-map("n", "<leader>r", ":w | vsp | term gcc % -lm -o %< && ./%< <cr> i")
+-- map("n", "<leader>r", ":w | sp | term javac %  %< && %< <cr> i", { desc = "Run Java program"})
+-- map("n", "<leader>r", ":w | vsp | term rustc % -lm -o %< && ./%< <cr> i")
+map("n", "<leader>r", ":w | vsp | term cargo run<cr> i")
 -- map("n", "<leader>a", ":q <cr>")
 map("i", "kj", "<Esc>")
 -- map("n", "kj", "<Esc>")

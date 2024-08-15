@@ -268,6 +268,10 @@ export PATH="$PATH:/home/ram/.local/bin"
 #zoxide
 eval "$(zoxide init bash --cmd 'cd')"
 alias cdi='__zoxide_zi'
+
+# Set up fzf key bindings and fuzzy completion
+eval "$(fzf --bash)"
+
 # eval "$(atuin init bash)"
 # [[ -f ~/.bash-preexec.sh ]] && source ~/.bash-preexec.sh
 source /usr/share/nvm/init-nvm.sh

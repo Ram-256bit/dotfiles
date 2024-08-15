@@ -21,7 +21,8 @@ map("n", "<leader>r", ":w | vsp | term gcc % -lm -o %< && ./%< <cr> i")
 map("i", "kj", "<Esc>")
 -- map("n", "kj", "<Esc>")
 -- map("v", "kj", "<Esc>")
-
+-- map("n", "<leader>u", "<cmd>UndotreeToggle<cr>")
+map("n", "<leader>u", vim.cmd.UndotreeToggle)
 -- map("n", "<leader>fm", ":LspStart <cr> :w <cr> :LspStop<cr>")
 
 -- ---@type MappingsTable

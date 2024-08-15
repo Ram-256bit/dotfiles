@@ -275,3 +275,6 @@ eval "$(fzf --bash)"
 # eval "$(atuin init bash)"
 # [[ -f ~/.bash-preexec.sh ]] && source ~/.bash-preexec.sh
 source /usr/share/nvm/init-nvm.sh
+
+# For 1Password ssh agent
+export SSH_AUTH_SOCK=~/.1password/agent.sock

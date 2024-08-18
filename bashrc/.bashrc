@@ -69,6 +69,9 @@ PS1='[\u@\h \W]\$ '
 # If not running interactively, don't do anything
 [[ $- != *i* ]] && return
 
+# Load Starship
+source <(starship init bash --print-full-init)
+
 # Load starship prompt if starship is installed
 if  [ -x /usr/bin/starship ]; then
     __main() {
@@ -90,11 +93,11 @@ fi
 ## Useful aliases
 
 # Replace ls with exa
-alias ls='exa -al --color=always --group-directories-first --icons' # preferred listing
-alias la='exa -a --color=always --group-directories-first --icons'  # all files and dirs
-alias ll='exa -l --color=always --group-directories-first --icons'  # long format
-alias lt='exa -aT --color=always --group-directories-first --icons' # tree listing
-alias l.='exa -ald --color=always --group-directories-first --icons .*' # show only dotfiles
+alias ls='eza -al --color=always --group-directories-first --icons' # preferred listing
+alias la='eza -a --color=always --group-directories-first --icons'  # all files and dirs
+alias ll='eza -l --color=always --group-directories-first --icons'  # long format
+alias lt='eza -aT --color=always --group-directories-first --icons' # tree listing
+alias l.='eza -ald --color=always --group-directories-first --icons .*' # show only dotfiles
 
 # Replace some more things with better alternatives
 alias cat='bat --style header --style snip --style changes --style header'
@@ -274,7 +277,7 @@ eval "$(fzf --bash)"
 
 # eval "$(atuin init bash)"
 # [[ -f ~/.bash-preexec.sh ]] && source ~/.bash-preexec.sh
-source /usr/share/nvm/init-nvm.sh
+# source /usr/share/nvm/init-nvm.sh
 
 # For 1Password ssh agent
-export SSH_AUTH_SOCK=~/.1password/agent.sock
+# export SSH_AUTH_SOCK=~/.1password/agent.sock

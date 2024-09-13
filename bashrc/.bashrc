@@ -278,3 +278,11 @@ source /usr/share/nvm/init-nvm.sh
 
 # For 1Password ssh agent
 export SSH_AUTH_SOCK=~/.1password/agent.sock
+
+export ANDROID_HOME="/home/ram/Android/Sdk"
+export CHROME_EXECUTABLE="/bin/google-chrome-stable"
+export ANDROID_SDK_ROOT="/home/ram/Android/Sdk"
+
+export PATH=$PATH:$ANDROID_HOME/tools
+export PATH=$PATH:$ANDROID_HOME/platform-tools
+

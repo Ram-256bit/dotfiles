@@ -15,6 +15,7 @@ M.treesitter = {
 		"terraform",
 		"python",
 		"java",
+		"hyprlang",
 		-- "yaml",
 	},
 	indent = {

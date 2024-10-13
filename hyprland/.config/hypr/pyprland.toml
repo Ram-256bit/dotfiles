@@ -46,14 +46,15 @@ command = "alacritty --class alacritty-dropterm-qalc -o 'font.size=20' -e qalc"
 class = "alacritty-dropterm-qalc"
 size = "30% 60%"
 
-[scratchpads.obsidian]
-animation = "fromRight"
-command = "obsidian"
-class = "obsidian"
-size = "30% 60%"
-# process_tracking = false
-lazy = false
-
+# [scratchpads.obsidian]
+# animation = "fromRight"
+# # command = "obsidian"
+# command = "flatpak run md.obsidian.Obsidian"
+# class = "obsidian"
+# size = "30% 60%"
+# # process_tracking = false
+# lazy = false
+#
 [scratchpads.volume]
 animation = "fromRight"
 command = "pavucontrol"

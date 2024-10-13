@@ -274,7 +274,7 @@ eval "$(fzf --bash)"
 
 # eval "$(atuin init bash)"
 # [[ -f ~/.bash-preexec.sh ]] && source ~/.bash-preexec.sh
-source /usr/share/nvm/init-nvm.sh
+# source /usr/share/nvm/init-nvm.sh
 
 # For 1Password ssh agent
 export SSH_AUTH_SOCK=~/.1password/agent.sock
@@ -286,3 +286,15 @@ export ANDROID_SDK_ROOT="/home/ram/Android/Sdk"
 export PATH=$PATH:$ANDROID_HOME/tools
 export PATH=$PATH:$ANDROID_HOME/platform-tools
 
+
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+
+# pnpm
+export PNPM_HOME="/home/ram/.local/share/pnpm"
+case ":$PATH:" in
+  *":$PNPM_HOME:"*) ;;
+  *) export PATH="$PNPM_HOME:$PATH" ;;
+esac
+# pnpm end

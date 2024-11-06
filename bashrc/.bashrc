@@ -277,7 +277,7 @@ eval "$(fzf --bash)"
 # source /usr/share/nvm/init-nvm.sh
 
 # For 1Password ssh agent
-export SSH_AUTH_SOCK=~/.1password/agent.sock
+# export SSH_AUTH_SOCK=~/.1password/agent.sock
 
 export ANDROID_HOME="/home/ram/Android/Sdk"
 export CHROME_EXECUTABLE="/bin/google-chrome-stable"
@@ -298,3 +298,4 @@ case ":$PATH:" in
   *) export PATH="$PNPM_HOME:$PATH" ;;
 esac
 # pnpm end
+

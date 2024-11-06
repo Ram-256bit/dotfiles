@@ -1,6 +1,8 @@
+[general]
 import = [
   "~/.config/alacritty/catppuccin-mocha.toml"
 ]
+
 [env]
 TERM = "xterm-256color"
 # ###########################################
@@ -67,4 +69,3 @@ unfocused_hollow = false
 
 [cursor.style]
 shape = "Underline"
-blinking = "Always"

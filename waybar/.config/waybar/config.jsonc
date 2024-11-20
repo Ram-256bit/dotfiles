@@ -27,7 +27,7 @@
     ],
     "modules-center": [
         // "hyprland/workspaces",
-        "custom/leetcode",
+        //"custom/leetcode",
         "clock"
         ,"privacy"
     ],

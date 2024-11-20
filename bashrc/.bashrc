@@ -286,11 +286,11 @@ export ANDROID_SDK_ROOT="/home/ram/Android/Sdk"
 export PATH=$PATH:$ANDROID_HOME/tools
 export PATH=$PATH:$ANDROID_HOME/platform-tools
 
-
-export NVM_DIR="$HOME/.nvm"
-[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
-[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
-
+#
+# export NVM_DIR="$HOME/.nvm"
+# [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+# [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+#
 # pnpm
 export PNPM_HOME="/home/ram/.local/share/pnpm"
 case ":$PATH:" in
@@ -299,3 +299,4 @@ case ":$PATH:" in
 esac
 # pnpm end
 
+export MANPAGER='nvim +Man!'

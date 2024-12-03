@@ -28,6 +28,20 @@ map("i", "kj", "<Esc>")
 map("n", "<leader>u", vim.cmd.UndotreeToggle)
 -- map("n", "<leader>fm", ":LspStart <cr> :w <cr> :LspStop<cr>")
 
+map("n", "<leader>wm", function()                 
+        vim.b.x = not vim.b.x
+        require('cmp').setup.buffer { enabled = not vim.b.x }
+    end, {desc = "Writing mode (Toggle Autocompletion CMP)"})
+ 
+ -- -- Toggle Autocompletion for Writingmode
+ --    ["<a-a>"] = { 
+ --      function()                 
+ --        vim.b.x = not vim.b.x
+ -- require('cmp').setup.buffer { enabled = not vim.b.x }
+ --    end,
+ --      "Toggle Autocompletion CMP",
+ --    },
+
 -- ---@type MappingsTable
 -- local M = {}
 --

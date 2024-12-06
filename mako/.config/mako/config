@@ -1,9 +1,9 @@
-anchor=bottom-right
+anchor=top-right
 font=monospace 10
 background-color=#000000
 text-color=#ff0000
 width=350
-margin=0,20,20
+margin=10,10,10
 padding=10
 border-size=1
 border-color=#ff0000

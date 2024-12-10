@@ -36,7 +36,7 @@ plugins = [
 
 [scratchpads.term]
 animation = "fromTop"
-command = "alacritty --class alacritty-dropterm --title alacritty-dropterm -e tmux"
+command = "alacritty --class alacritty-dropterm --title alacritty-dropterm -e tmux -u"
 class = "alacritty-dropterm"
 size = "65% 70%"
 

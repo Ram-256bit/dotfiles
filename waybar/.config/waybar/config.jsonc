@@ -122,12 +122,13 @@
         "on-click": "~/.config/waybar/scripts/OCV",
     },
     "cpu": {
-        "format": "🖳{usage}%",
+        "format": "  {usage}%",
         "on-click": "alacritty -e btop"
     },
     "memory": {
         // "format": "🖴 {: >3}%",
-        "format": "🖴 {avail}",
+        //"format": "🖴 {avail}",
+        "format": "  {avail}",
         "on-click": "alacritty -e btop"
     },
     "temperature": {

@@ -44,7 +44,8 @@ nord15 #b48ead
   border: 0;
   border-radius: 0;
   padding: 0 0 0 0;
-  font-family: Symbols Nerd Font Mono;
+  /*font-family: Symbols Nerd Font Mono;*/
+  font-family: JetBrainsMonoNerdFont;
   font-size: 15px;
   margin-right: 2px;
   margin-left: 2px;

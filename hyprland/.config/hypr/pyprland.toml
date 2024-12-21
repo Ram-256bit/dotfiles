@@ -39,6 +39,7 @@ animation = "fromTop"
 command = "alacritty --class alacritty-dropterm --title alacritty-dropterm -e tmux -u"
 class = "alacritty-dropterm"
 size = "65% 70%"
+pinned = false
 
 [scratchpads.qalc]
 animation = "fromRight"

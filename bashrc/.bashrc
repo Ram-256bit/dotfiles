@@ -186,7 +186,7 @@ ranger_cd() {
 #     r=$(printf '0x%0.2s' "$hex")
 #     g=$(printf '0x%0.2s' ${hex#??})
 #     b=$(printf '0x%0.2s' ${hex#????})
-#     printf '%03d' "$(( (r<75?0:(r-35)/40)*6*6 + 
+#     printf '%03d' "$(( (r<75?0:(r-35)/40)*6*6 +
 #                        (g<75?0:(g-35)/40)*6   +
 #                        (b<75?0:(b-35)/40)     + 16 ))"
 # }
@@ -212,7 +212,7 @@ which_term(){
     shopt -s extglob
     case $term in
         ## If this terminal is a python or perl program,
-        ## then the emulator's name is likely the second 
+        ## then the emulator's name is likely the second
         ## part of it
         */python*|*/perl*    )
          term=$(basename "$(readlink -f $(echo "$term" | cut -d ' ' -f 2))")
@@ -255,9 +255,9 @@ which_term(){
 #              done
 #              ;;
 #      esac
-     ## If none of the version arguments worked, try and get the 
+     ## If none of the version arguments worked, try and get the
 #      ## package version
-#      [ $found -eq 0 ] && echo "$term " $(dpkg -l $term | awk '/^ii/{print $3}')    
+#      [ $found -eq 0 ] && echo "$term " $(dpkg -l $term | awk '/^ii/{print $3}')
 #  }
 #
 # . "$HOME/.cargo/env"

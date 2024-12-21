@@ -153,7 +153,7 @@ function yy() {
 	if cwd="$(cat -- "$tmp")" && [ -n "$cwd" ] && [ "$cwd" != "$PWD" ]; then
 		builtin cd -- "$cwd"
 	fi
-	/bin/rm -f -- "$tmp"
+	/run/current-system/sw/bin/rm -f -- "$tmp"  #--NixOS-specific--#
 }
 
 ########################################################

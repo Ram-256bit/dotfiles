@@ -1,3 +1,6 @@
+if [[ -n "$ZSH_DEBUGRC" ]]; then
+  zmodload zsh/zprof
+fi
 # If you come from bash you might have to change your $PATH.
 # export PATH=$HOME/bin:$HOME/.local/bin:/usr/local/bin:$PATH
 
@@ -75,6 +78,13 @@ plugins=(dnf safe-paste starship sudo tldr zoxide zsh-interactive-cd fzf)
 ZOXIDE_CMD_OVERRIDE="cd"
 
 source $ZSH/oh-my-zsh.sh
+
+
+autoload -Uz compinit
+for dump in ~/.zcompdump(N.mh+24); do
+  compinit
+done
+compinit -C
 
 # User configuration
 
@@ -166,3 +176,6 @@ export PATH=$PATH:$ANDROID_HOME/platform-tools
 
 export MANPAGER='nvim +Man!'
 
+if [[ -n "$ZSH_DEBUGRC" ]]; then
+  zprof
+fi

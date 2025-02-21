@@ -54,6 +54,7 @@ author: "arcticicestudio"
 }
 
 #input {
+  color: @base04;
   border: none;
   background-color: rgba (0, 0, 0, 0.6);
   border-radius: 5px;

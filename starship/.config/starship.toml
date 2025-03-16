@@ -52,9 +52,6 @@
 # # style="red"
 
 
-
-
-
 # # FIRST LINE/ROW: Info & Status
 # # First param ─┌
 # [username]
@@ -105,17 +102,17 @@ disabled = true
 discharging_symbol = ""
 full_symbol = ""
 
-[[battery.display]]  # "bold red" style when capacity is between 0% and 10%
+[[battery.display]] # "bold red" style when capacity is between 0% and 10%
 disabled = false
 style = "bold red"
 threshold = 15
 
-[[battery.display]]  # "bold yellow" style when capacity is between 10% and 30%
+[[battery.display]] # "bold yellow" style when capacity is between 10% and 30%
 disabled = true
 style = "bold yellow"
 threshold = 50
 
-[[battery.display]]  # "bold green" style when capacity is between 10% and 30%
+[[battery.display]] # "bold green" style when capacity is between 10% and 30%
 disabled = true
 style = "bold green"
 threshold = 80
@@ -139,66 +136,66 @@ time_format = "%T"
 # map_symbol = true
 # pipestatus = true
 # symbol = "🔴"
-#
-# [aws]
-# symbol = " "
-#
-# [conda]
-# symbol = " "
-#
-# [dart]
-# symbol = " "
-#
-# [docker_context]
-# symbol = " "
-#
-# [elixir]
-# symbol = " "
-#
-# [elm]
-# symbol = " "
-#
+
+[aws]
+symbol = " "
+
+[conda]
+symbol = " "
+
+[dart]
+symbol = " "
+
+[docker_context]
+symbol = " "
+
+[elixir]
+symbol = " "
+
+[elm]
+symbol = " "
+
 [git_branch]
 symbol = " "
 
-# [golang]
-# symbol = " "
-#
-# [hg_branch]
-# symbol = " "
-#
-# [java]
-# symbol = " "
-#
-# [julia]
-# symbol = " "
-#
-# [nim]
-# symbol = " "
-#
-# [nix_shell]
-# symbol = " "
-#
+[golang]
+symbol = " "
+
+[hg_branch]
+symbol = " "
+
+[java]
+symbol = " "
+
+[julia]
+symbol = " "
+
+[nim]
+symbol = " "
+
+[nix_shell]
+symbol = " "
+
 [nodejs]
 symbol = " "
-#
+
 # [package]
 # symbol = " "
-#
-# [perl]
-# symbol = " "
-#
-# [php]
-# symbol = " "
-#
-# [python]
-# symbol = " "
-#
-# [ruby]
-# symbol = " "
-#
-# [rust]
-# symbol = " "
-#
-# [swift]
-# symbol = "ﯣ "
+
+[perl]
+symbol = " "
+
+[php]
+symbol = " "
+
+[python]
+symbol = " "
+
+[ruby]
+symbol = " "
+
+[rust]
+symbol = " "
+
+[swift]
+symbol = "ﯣ "

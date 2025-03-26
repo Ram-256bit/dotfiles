@@ -67,7 +67,7 @@ window#waybar {
 /* } */
 /**/
 #workspaces button.active {
-    border-color: #81a1c1;
+  border-color: #81a1c1;
 }
 
 #workspaces {
@@ -228,3 +228,8 @@ window#waybar {
 /* #custom-network_traffic { */
 /*     color: #d08770; */
 /* } */
+
+.network {
+  background-color: #2e3440;
+  color: #d8dee9;
+}

@@ -154,6 +154,7 @@ alias fs='sudo nixos-rebuild switch --flake ~/my-flake'
 alias fm='nvim ~/my-flake/configuration.nix'
 alias fu='cd ~/my-flake ; sudo nix flake update ; cd -'
 alias fg='lazygit --path ~/my-flake'
+alias fus='fu;fs;notify-send "System Updated"'
 
 # Yazi - stay in current dierctory
 # ref: https://yazi-rs.github.io/docs/quick-start#shell-wrapper
@@ -176,6 +177,10 @@ export PATH=$PATH:$ANDROID_HOME/platform-tools
 
 export MANPAGER='nvim +Man!'
 
+export PATH=$PATH:$HOME/Documents/ani-cli/
 if [[ -n "$ZSH_DEBUGRC" ]]; then
   zprof
 fi
+
+# Created by `pipx` on 2025-03-16 16:12:24
+export PATH="$PATH:/home/ram/.local/bin"

@@ -47,6 +47,7 @@
   ],
 
   "modules-right": [
+    "tray",
     "mpris", // media info
 
     "custom/left6",
@@ -64,6 +65,8 @@
 
   // <<--< Modules >-->>
 
+  "tray": {},
+
   "custom/ws": {
     "exec": "~/.config/waybar/scripts/current-theme.sh",
     "return-type": "json",
@@ -74,14 +77,14 @@
   },
 
   "hyprland/workspaces": {
-    "on-scroll-up": "hyprctl dispatch workspace -1",
-    "on-scroll-down": "hyprctl dispatch workspace +1",
+    "on-scroll-up": "hyprctl dispatch workspace +1",
+    "on-scroll-down": "hyprctl dispatch workspace -1",
     "persistent-workspaces": {
-      "1": [],
-      "2": [],
-      "3": [],
-      "4": [],
-      "5": [],
+      // "1": [],
+      // "2": [],
+      // "3": [],
+      // "4": [],
+      // "5": [],
     },
   },
 
@@ -213,7 +216,7 @@
   },
 
   "clock#date": {
-    "format": "󰨳 {:%m-%d}",
+    "format": "󰨳 {:%d-%m}",
     "tooltip-format": "<tt>{calendar}</tt>",
 
     "calendar": {

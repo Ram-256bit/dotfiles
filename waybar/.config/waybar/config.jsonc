@@ -47,6 +47,9 @@
   ],
 
   "modules-right": [
+    "cpu",
+    "memory",
+
     "tray",
     "mpris", // media info
 
@@ -174,12 +177,14 @@
       "critical": 90,
     },
 
-    "format": "󰘚 {percentage}%",
-    "format-critical": "󰀦 {percentage}%",
-    "tooltip-format": "Memory Used: {used:0.1f} GB / {total:0.1f} GB",
-    "interval": 5,
-    "min-length": 7,
-    "max-length": 7,
+    "format": " 󰘚 {avail} ",
+
+    // "format": "󰘚 {percentage}%",
+    "format-critical": " 󰀦 {avail} ",
+    // "tooltip-format": "Memory Used: {used:0.1f} GB / {total:0.1f} GB",
+    // "interval": 5,
+    // "min-length": 7,
+    // "max-length": 7,
   },
 
   "cpu": {

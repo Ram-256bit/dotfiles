@@ -169,11 +169,15 @@ function yy() {
 
 ########################################################
 
-export ANDROID_HOME="$HOME/Android/Sdk"
-export CHROME_EXECUTABLE="/bin/google-chrome-stable"
-export ANDROID_SDK_ROOT="$HOME/Android/Sdk"
-export PATH=$PATH:$ANDROID_HOME/tools
-export PATH=$PATH:$ANDROID_HOME/platform-tools
+# export ANDROID_HOME="$HOME/Android/Sdk"
+# export CHROME_EXECUTABLE="/bin/google-chrome-stable"
+# export ANDROID_SDK_ROOT="$HOME/Android/Sdk"
+# export PATH=$PATH:$ANDROID_HOME/tools
+# export PATH=$PATH:$ANDROID_HOME/platform-tools
+export CHROME_EXECUTABLE=google-chrome-stable
+# export ANDROID_HOME=/etc/profiles/per-user/ram/bin/adb
+# export ANDROID_SDK_ROOT=/home/ram/Android/Sdk
+# export ANDROID_SDK_ROOT~/Android/Sdk/cmdline-tools/latest/bin
 
 export MANPAGER='nvim +Man!'
 

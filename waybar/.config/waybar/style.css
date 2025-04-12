@@ -151,10 +151,12 @@ tooltip label {
 #pulseaudio,
 #backlight,
 #battery,
+#network,
+#custom-network_traffic,
 #custom-power {
   opacity: 1;
   color: @module-fg;
-  padding: 0 4px;
+  padding: 0 12px;
 }
 
 #custom-left1,
@@ -227,34 +229,34 @@ tooltip label {
 /* Memory */
 
 #custom-left3 {
-  color: @memory;
-  background: @cpuinfo;
+  /* color: @memory; */
+  /* background: @cpuinfo; */
   padding-left: 3px;
 }
 #memory {
-  background: @memory;
-  padding-left: 1px;
+  /* background: @memory; */
+  /* padding-left: 1px; */
   padding-right: 0;
 }
 #memory.warning {
-  color: @warning;
+  /* color: @warning; */
 }
 #memory.critical {
-  color: @critical;
+  /* color: @critical; */
 }
 
 /* CPU */
 
 #custom-left4 {
-  color: @cpu;
-  background: @memory;
+  /* color: @cpu; */
+  /* background: @memory; */
   padding-left: 3px;
 }
 #cpu {
-  background: @cpu;
+  /* background: @cpu; */
 }
 #custom-leftin1 {
-  color: @cpu;
+  /* color: @cpu; */
   margin-bottom: -1px;
 }
 
@@ -368,7 +370,7 @@ tooltip label {
   padding-left: 3px;
 }
 #pulseaudio {
-  background: @pulseaudio;
+  /* background: @pulseaudio; */
 }
 #pulseaudio:hover {
   color: @hover-fg;
@@ -394,10 +396,10 @@ tooltip label {
 }
 #battery {
   color: @module-fg;
-  background: @battery;
+  /* background: @battery; */
 }
 #battery.warning {
-  color: @warning;
+  /* color: @warning; */
 }
 #battery.critical {
   color: @critical;

@@ -11,3 +11,6 @@ end, { noremap = true, silent = true })
 vim.keymap.set("n", "<S-Tab>", function()
   vim.cmd("bprevious")
 end, { noremap = true, silent = true })
+
+-- Set ; to : in normal mode
+vim.keymap.set("n", ";", ":", { noremap = true })

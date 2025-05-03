@@ -1,0 +1,8 @@
+export hide_on_touch=1
+export XCURSOR_THEME=Bibata-Modern-Classic
+export GDK_BACKEND=wayland,x11,*
+export QT_QPA_PLATFORM=wayland;xcb
+export SDL_VIDEODRIVER=wayland
+export CLUTTER_BACKEND=wayland
+export QT_AUTO_SCREEN_SCALE_FACTOR=1
+export QT_QPA_PLATFORM=wayland;xcb

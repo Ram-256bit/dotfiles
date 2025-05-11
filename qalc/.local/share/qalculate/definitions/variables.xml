@@ -1,0 +1,11 @@
+<?xml version="1.0"?>
+<QALCULATE version="5.3.0">
+  <variable>
+    <names>lakh</names>
+    <value>100 000</value>
+  </variable>
+  <variable>
+    <names>crore</names>
+    <value>100 lakh</value>
+  </variable>
+</QALCULATE>

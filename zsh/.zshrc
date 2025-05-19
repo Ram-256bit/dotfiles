@@ -73,7 +73,7 @@ HIST_STAMPS="dd/mm/yyyy"
 # Custom plugins may be added to $ZSH_CUSTOM/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(dnf safe-paste starship sudo tldr zoxide zsh-interactive-cd fzf)
+plugins=(safe-paste starship zoxide zsh-interactive-cd fzf)
 
 ZOXIDE_CMD_OVERRIDE="cd"
 

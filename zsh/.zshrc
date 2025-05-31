@@ -1,6 +1,21 @@
 if [[ -n "$ZSH_DEBUGRC" ]]; then
   zmodload zsh/zprof
 fi
+
+zstyle ':omz:lib:completion' load 'no'
+# Place early in .zshrc
+zstyle ':completion::complete:*' use-cache on
+zstyle ':completion::complete:*' cache-path ~/.zsh/cache
+
+# Lazy init compinit only once
+autoload -Uz compinit
+if [[ ! -f ~/.zsh/cache/zcompdump.zsh ]]; then
+  compinit -C -d ~/.zsh/cache/zcompdump.zsh
+else
+  compinit -d ~/.zsh/cache/zcompdump.zsh
+fi
+
+
 # If you come from bash you might have to change your $PATH.
 # export PATH=$HOME/bin:$HOME/.local/bin:/usr/local/bin:$PATH
 
@@ -80,11 +95,11 @@ ZOXIDE_CMD_OVERRIDE="cd"
 source $ZSH/oh-my-zsh.sh
 
 
-autoload -Uz compinit
-for dump in ~/.zcompdump(N.mh+24); do
-  compinit
-done
-compinit -C
+# autoload -Uz compinit
+# for dump in ~/.zcompdump(N.mh+24); do
+#   compinit
+# done
+# compinit -C
 
 # User configuration
 

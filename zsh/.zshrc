@@ -170,6 +170,7 @@ alias fm='nvim ~/my-flake/configuration.nix'
 alias fu='cd ~/my-flake ; sudo nix flake update ; cd -'
 alias fg='lazygit --path ~/my-flake'
 alias fus='fu;fs;notify-send "System Updated"'
+alias fgc='sudo nix-collect-garbage -d ; fs'
 
 # Yazi - stay in current dierctory
 # ref: https://yazi-rs.github.io/docs/quick-start#shell-wrapper

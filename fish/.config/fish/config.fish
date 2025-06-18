@@ -4,6 +4,7 @@ end
 set -U fish_greeting
 set -g FZF_CTRL_T_COMMAND "command find -L \$dir -type f 2> /dev/null | sed '1d; s#^\./##'"
 set -Ux EDITOR nvim
+set -Ux LANG en_IN.UTF-8
 
 alias v="nvim"
 alias c="clear"

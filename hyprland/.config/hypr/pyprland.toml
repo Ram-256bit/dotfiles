@@ -36,15 +36,19 @@ plugins = [
 
 [scratchpads.term]
 animation = "fromTop"
-command = "alacritty --class alacritty-dropterm --title alacritty-dropterm -e tmux -u"
-class = "alacritty-dropterm"
+command = "ghostty --class=ghostty-dropterm --title=ghostty-dropterm --command='tmux -u'"
+class = "ghostty-dropterm"
+# command = "alacritty --class alacritty-dropterm --title alacritty-dropterm -e tmux -u"
+# class = "alacritty-dropterm"
 size = "65% 70%"
 pinned = false
 
 [scratchpads.qalc]
 animation = "fromRight"
-command = "alacritty --class alacritty-dropterm-qalc -o 'font.size=20' -e qalc"
-class = "alacritty-dropterm-qalc"
+command = "ghostty --class=ghostty-dropterm-qalc --title=ghostty-dropterm-qalc --font-size=20 --command=qalc"
+class = "ghostty-dropterm-qalc"
+# command = "alacritty --class alacritty-dropterm-qalc -o 'font.size=20' -e qalc"
+# class = "alacritty-dropterm-qalc"
 size = "30% 60%"
 
 # [scratchpads.obsidian]

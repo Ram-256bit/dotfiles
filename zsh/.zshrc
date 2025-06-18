@@ -166,6 +166,7 @@ alias d="yy"
 
 # Nix alias
 alias fs='sudo nixos-rebuild switch --flake ~/my-flake'
+alias fb='sudo nixos-rebuild boot --flake ~/my-flake'
 alias fm='nvim ~/my-flake/configuration.nix'
 alias fu='cd ~/my-flake ; sudo nix flake update ; cd -'
 alias fg='lazygit --path ~/my-flake'

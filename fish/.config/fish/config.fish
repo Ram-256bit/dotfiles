@@ -3,6 +3,7 @@ if status is-interactive
 end
 set -U fish_greeting
 set -g FZF_CTRL_T_COMMAND "command find -L \$dir -type f 2> /dev/null | sed '1d; s#^\./##'"
+set -Ux EDITOR nvim
 
 alias v="nvim"
 alias c="clear"
@@ -41,6 +42,17 @@ alias fu='cd ~/my-flake ; sudo nix flake update ; cd -'
 alias fg='lazygit --path ~/my-flake'
 alias fus='fu;fs;notify-send "System Updated"'
 alias fgc='sudo nix-collect-garbage -d ; fs'
+
+# Yazi - stay in current dierctory
+# ref: https://yazi-rs.github.io/docs/quick-start#shell-wrapper
+function yy
+    set tmp (mktemp -t "yazi-cwd.XXXXXX")
+    yazi $argv --cwd-file="$tmp"
+    if read -z cwd <"$tmp"; and [ -n "$cwd" ]; and [ "$cwd" != "$PWD" ]
+        builtin cd -- "$cwd"
+    end
+    rm -f -- "$tmp"
+end
 
 starship init fish | source
 zoxide init fish --cmd cd | source

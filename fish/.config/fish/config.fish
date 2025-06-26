@@ -52,7 +52,7 @@ function yy
     if read -z cwd <"$tmp"; and [ -n "$cwd" ]; and [ "$cwd" != "$PWD" ]
         builtin cd -- "$cwd"
     end
-    rm -f -- "$tmp"
+    /run/current-system/sw/bin/rm -f -- "$tmp" #--NixOS-specific--#
 end
 
 starship init fish | source

@@ -7,5 +7,3 @@ __pycache__/
 # for qalc history
 qalc.history
 
-# for fish shell
-fish_variables

@@ -65,7 +65,9 @@
     "on-click": "activate",
     "on-click-middle": "close",
     "on-click-right": "fullscreen",
-    "ignore-list": ["alacritty-dropterm"],
+    "ignore-list": [
+      "alacritty-dropterm"
+    ],
   },
   "hyprland/workspaces": {
     "format": "{icon}",
@@ -112,7 +114,9 @@
     // Wed Apr 24 10:42 pm
     //"format": " {:%a %d %b  %H:%M}",	//24 hour format
     "format-alt": " {:%d/%m/%Y  %H:%M:%S}",
-    "timezones": ["Asia/Kolkata"],
+    "timezones": [
+      "Asia/Kolkata"
+    ],
     //"max-length": 200
     "interval": 1,
     "on-click": "~/.config/waybar/scripts/OCV",
@@ -137,7 +141,10 @@
   "backlight": {
     // "device": "acpi_video1",
     "format": "{icon} {percent: >3}%",
-    "format-icons": ["", ""],
+    "format-icons": [
+      "",
+      ""
+    ],
     "on-scroll-down": "brightnessctl -c backlight set 1%-",
     "on-scroll-up": "brightnessctl -c backlight set +1%",
     "on-click": "~/.config/waybar/scripts/backlight-hint.sh",
@@ -149,7 +156,13 @@
       "critical": 15,
     },
     "format": "{icon} {capacity: >3}%",
-    "format-icons": ["", "", "", "", ""],
+    "format-icons": [
+      "",
+      "",
+      "",
+      "",
+      ""
+    ],
     "format-charging": "<span font='Font Awesome 6 Free'></span>  <span font='Font Awesome 6 Free 11'>{icon}</span>  {capacity}%",
     "format-full": "<span font='Font Awesome 6 Free'></span>  <span font='Font Awesome 6 Free 11'>{icon}</span>  Charged",
     "interval": 2,
@@ -219,7 +232,6 @@
     "max-length": 24,
     //"format-icons": ["󰤯", "󰤟", "󰤢", "󰤥", "󰤨"],
   },
-
   "pulseaudio": {
     "scroll-step": 3, // %, can be a float
     "format": "{icon} {volume}% {format_source}",
@@ -237,7 +249,11 @@
       "phone": "",
       "portable": "",
       "car": "",
-      "default": ["", "", ""],
+      "default": [
+        "",
+        "",
+        ""
+      ],
     },
     "on-click": "pavucontrol",
     "on-click-right": "pactl set-source-mute @DEFAULT_SOURCE@ toggle",

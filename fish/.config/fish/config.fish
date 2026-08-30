@@ -1,10 +1,10 @@
 if status is-interactive
     # Commands to run in interactive sessions can go here
 end
-set -U fish_greeting
 set -g FZF_CTRL_T_COMMAND "command find -L \$dir -type f 2> /dev/null | sed '1d; s#^\./##'"
+set -g fish_greeting
 set -gx EDITOR nvim
-set -Ux LANG en_IN.UTF-8
+set -gx LANG en_IN.UTF-8
 
 alias v="nvim"
 alias c="clear"

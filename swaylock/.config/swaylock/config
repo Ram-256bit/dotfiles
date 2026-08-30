@@ -12,9 +12,6 @@ key-hl-color=#5e81ac
 separator-color=#4c566a
 layout-text-color=#eceff4
 line-wrong-color=#d08770
-effect-blur=10x10
 show-failed-attempts
-screenshots
-time-effects
 fade-in 3
 grace 30
